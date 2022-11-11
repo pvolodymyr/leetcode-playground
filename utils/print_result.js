@@ -1,5 +1,6 @@
 const { getStringifyedLinkedList } = require("./utils");
 const {
+  binaryTree,
   linkedList,
   numbersList,
   chunkOfFiveIslands,
@@ -79,11 +80,18 @@ const isNumberPalindrome = (testFunction) => {
   );
 };
 
+const getBinaryTreeDeepth = (testFunction) => {
+  const treeDepth = testFunction(binaryTree);
+
+  console.log(`The depth of binary tree is ${treeDepth}`);
+};
+
 module.exports = {
   twoSum,
-  isLinkedListPalindrome,
   reverseLinkedList,
   makePascalTriangle,
   isNumberPalindrome,
+  getBinaryTreeDeepth,
+  isLinkedListPalindrome,
   calculateNumberOfIslands,
 };

@@ -65,7 +65,52 @@ const numbersList = [
 const validPalindromeNumber = 12321;
 const invalidPalindromeNumber = 1231;
 
+const binaryTree = {
+  root: {
+    value: 10,
+    leftNode: {
+      value: 5,
+      leftNode: {
+        value: 2,
+        leftNode: null,
+        rightNode: {
+          value: 4,
+          leftNode: null,
+          rightNode: null,
+        },
+      },
+      rightNode: {
+        value: 3,
+        leftNode: null,
+        rightNode: null,
+      },
+    },
+    rightNode: {
+      value: 7,
+      leftNode: null,
+      rightNode: {
+        value: 6,
+        leftNode: {
+          value: 17,
+          leftNode: {
+            value: 21,
+            leftNode: null,
+            rightNode: null,
+          },
+          rightNode: null,
+        },
+        rightNode: {
+          value: 11,
+          leftNode: null,
+          rightNode: null,
+        },
+      },
+    },
+  },
+};
+
 module.exports = {
+  binaryTree,
   linkedList,
   numbersList,
   chunkOfFiveIslands,
