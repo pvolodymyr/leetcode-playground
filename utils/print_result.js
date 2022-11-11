@@ -3,6 +3,8 @@ const {
   binaryTree,
   linkedList,
   numbersList,
+  treeSumTarget,
+  treeSumNumbers,
   chunkOfFiveIslands,
   validPalindromeNumber,
   invalidPalindromeNumber,
@@ -86,9 +88,22 @@ const getBinaryTreeDeepth = (testFunction) => {
   console.log(`The depth of binary tree is ${treeDepth}`);
 };
 
+const getClosestTreeSum = (testFunction) => {
+  const { resultSum, addedNumbers } = testFunction(
+    treeSumNumbers,
+    treeSumTarget
+  );
+  console.log(
+    `The closest sum to ${treeSumTarget} is ${resultSum} mady by adding ${addedNumbers.join(
+      "+"
+    )}}`
+  );
+};
+
 module.exports = {
   twoSum,
   reverseLinkedList,
+  getClosestTreeSum,
   makePascalTriangle,
   isNumberPalindrome,
   getBinaryTreeDeepth,

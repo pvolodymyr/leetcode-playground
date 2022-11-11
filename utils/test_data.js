@@ -109,10 +109,15 @@ const binaryTree = {
   },
 };
 
+const treeSumTarget = 4;
+const treeSumNumbers = [-1, 2, 1, -4, 3];
+
 module.exports = {
   binaryTree,
   linkedList,
   numbersList,
+  treeSumTarget,
+  treeSumNumbers,
   chunkOfFiveIslands,
   validPalindromeNumber,
   invalidPalindromeNumber,
