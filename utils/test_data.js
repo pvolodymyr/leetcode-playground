@@ -62,10 +62,15 @@ const numbersList = [
   1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
 ];
 
+const validPalindromeNumber = 12321;
+const invalidPalindromeNumber = 1231;
+
 module.exports = {
   linkedList,
   numbersList,
   chunkOfFiveIslands,
+  validPalindromeNumber,
+  invalidPalindromeNumber,
   validPalindromeLinkedList,
   invalidPalindromeLinkedList,
 };

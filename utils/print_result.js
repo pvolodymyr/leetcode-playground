@@ -3,6 +3,8 @@ const {
   linkedList,
   numbersList,
   chunkOfFiveIslands,
+  validPalindromeNumber,
+  invalidPalindromeNumber,
   validPalindromeLinkedList,
   invalidPalindromeLinkedList,
 } = require("./test_data");
@@ -16,16 +18,22 @@ const reverseLinkedList = (testFunction) => {
   );
 };
 
-const isPalindrome = (testFunction) => {
-  const log = (inputData) =>
-    console.log(
-      `${getStringifyedLinkedList(inputData)} ${
-        testFunction(inputData) ? "is a palindrome" : "is not a palindrome"
-      }`
-    );
+const logPalindrome = (testFunction, inputData) =>
+  testFunction(inputData) ? "is a palindrome" : "is not a palindrome";
 
-  log(validPalindromeLinkedList);
-  log(invalidPalindromeLinkedList);
+const isLinkedListPalindrome = (testFunction) => {
+  console.log(
+    `${getStringifyedLinkedList(inputData)} ${logPalindrome(
+      testFunction,
+      validPalindromeLinkedList
+    )};`
+  );
+  console.log(
+    `${getStringifyedLinkedList(inputData)} ${logPalindrome(
+      testFunction,
+      invalidPalindromeLinkedList
+    )};`
+  );
 };
 
 const calculateNumberOfIslands = (testFunction) => {
@@ -56,10 +64,26 @@ const twoSum = (testFunction) => {
   );
 };
 
+const isNumberPalindrome = (testFunction) => {
+  console.log(
+    `${validPalindromeNumber} ${logPalindrome(
+      testFunction,
+      validPalindromeNumber
+    )}`
+  );
+  console.log(
+    `${invalidPalindromeNumber} ${logPalindrome(
+      testFunction,
+      invalidPalindromeNumber
+    )}`
+  );
+};
+
 module.exports = {
   twoSum,
-  isPalindrome,
+  isLinkedListPalindrome,
   reverseLinkedList,
   makePascalTriangle,
+  isNumberPalindrome,
   calculateNumberOfIslands,
 };

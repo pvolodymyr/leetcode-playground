@@ -2,7 +2,7 @@ const printResult = require("./utils/print_result");
 
 const { reverseLinkedList } = require("./reversed_linked_list");
 
-const isPalindrome = (head) => {
+const isLinkedListPalindrome = (head) => {
   let pointer_a = head;
   let pointer_b = head;
 
@@ -23,4 +23,4 @@ const isPalindrome = (head) => {
   return true;
 };
 
-printResult.isPalindrome(isPalindrome);
+printResult.isLinkedListPalindrome(isLinkedListPalindrome);
