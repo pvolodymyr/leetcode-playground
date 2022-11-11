@@ -1,11 +1,4 @@
-const chunkOfFiveIslands = [
-  [0, 0, 1, 1, 1, 0, 0, 0],
-  [0, 0, 1, 0, 0, 0, 0, 0],
-  [0, 0, 1, 0, 0, 1, 1, 1],
-  [0, 0, 0, 0, 0, 0, 1, 1],
-  [1, 1, 0, 0, 0, 0, 0, 1],
-  [0, 0, 1, 0, 0, 0, 1, 0],
-];
+const printResult = require("./utils/print_result");
 
 const setSurroundedCellsToZero = (grid, rowIndex, cellIndex) => {
   if (
@@ -42,6 +35,4 @@ const calculateNumberOfIslands = (grid) => {
   return count;
 };
 
-const result = calculateNumberOfIslands(chunkOfFiveIslands);
-
-console.log(`result: founded ${result} of 5 islands`);
+printResult.calculateNumberOfIslands(calculateNumberOfIslands);

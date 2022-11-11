@@ -1,3 +1,5 @@
+const printResult = require("./utils/print_result");
+
 const makePascalTriangle = (triangleHeight) => {
   const result = [];
 
@@ -16,10 +18,4 @@ const makePascalTriangle = (triangleHeight) => {
   return result;
 };
 
-const triangle = makePascalTriangle(15);
-
-console.log("should log triangle with height of 5");
-
-for (const slice of triangle) {
-  console.log(slice.toString());
-}
+printResult.makePascalTriangle(makePascalTriangle);

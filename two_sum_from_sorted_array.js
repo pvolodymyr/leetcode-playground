@@ -1,6 +1,4 @@
-const target = [
-  1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
-];
+const printResult = require("./utils/print_result");
 
 const twoSum = (numbers, numberToFound) => {
   if (!numbers || numbers.length === 0 || !numberToFound) return null;
@@ -21,11 +19,4 @@ const twoSum = (numbers, numberToFound) => {
   }
 };
 
-const maxPossibleNumber = target[target.length - 1] + target[target.length - 2];
-const randomNumber = Math.floor(Math.random() * maxPossibleNumber);
-
-const [firstIndex, secondIndex] = twoSum(target, randomNumber);
-
-console.log(
-  `${randomNumber} can be obtained by adding the following items: ${target[firstIndex]}, ${target[secondIndex]}`
-);
+printResult.twoSum(twoSum);
